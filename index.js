@@ -4,11 +4,9 @@ const birthdayText = document.getElementById("birthdayText");
 const birthdayMusic = document.getElementById("birthdayMusic");
 
 const texts = [
-  "Chúc mừng sinh nhật người khiến tôi phải mỉm cười khi nghĩ đến",
-  "Chúc cho tuổi mới full niềm vui, full thành công 🥳🔥",
-  "Học kỳ tới auto điểm cao 😎✨",
-  "Sinh nhật thì quẩy banh nóc, quà nhận không kịp đếm, deadline tự né, chơi chill tẹt ga 🎁🎉",
-  "                                                                                                Ký tên: Chun"
+  "Chúc e tuổi mới sẽ là khởi đầu cho một hành trình thật rực rỡ. Chúc bạn luôn mạnh khỏe, hạnh phúc, gặp nhiều may mắn.",
+  "Chúc e luôn vững tin trên con đường mình đã chọn, mỗi bước đi đều mở ra những cơ hội mới, mỗi nỗ lực đều được đền đáp xứng đáng.",
+  "Chúc tương lai của bạn sẽ rực rỡ hơn cả những điều bạn từng mơ ước.🎉",
 ];
 
 giftBox.addEventListener('click', () => {
@@ -33,12 +31,12 @@ function typeWriter(texts, element, textIndex = 0, i = 0) {
         const text = texts[textIndex];
         if (i < text.length) {
         element.innerHTML += text.charAt(i);
-        setTimeout(() => typeWriter(texts, element, textIndex, i + 1), 40); // Tốc độ gõ
+        setTimeout(() => typeWriter(texts, element, textIndex, i + 1), 60); // Tốc độ gõ
         } else {
         setTimeout(() => {
             element.innerHTML += '<br>'; // Xóa nội dung cũ
             typeWriter(texts, element, textIndex + 1); // Chuyển sang đoạn văn tiếp theo
-        }, 2000); // Đợi 2 giây rồi chuyển quan đoạn khác
+        }, 1000); // Đợi 1 giây rồi chuyển sang đoạn khác
         }
     } else {
         // Thêm gif
